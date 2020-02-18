@@ -3,110 +3,54 @@ from lib.logging import logging
 import sys
 import math
 
-def write_header(title):
-
-    header = []
-
-    header.append("<!DOCTYPE html>")
-    header.append("<html>")
-    header.append(" <head>")
-    header.append('  <meta charset="UTF-8">')
-    header.append(f"  <title>{title}</title>")
-    header.append('  <link rel="stylesheet" href="./styles.css" type="text/css">')
-    header.append(" </head>")
-    header.append(" <body>")
-
-    return header
-
-
-def write_footer():
-
-    footer = []
-    footer.append(" </body>")
-    footer.append("</html>")
-
-    return footer
 
 def main():
 
-    NUM_TABLES = 2
-
+    NUM_TABLES = 1
+    TEMPLATE_FILE = HTML_DIR + "gchart_template.html"
     HISTOGRAM_FILE1 = HISTOGRAM_DIR + "LocationsHistogram.csv"
-    HISTOGRAM_FILE2 = HISTOGRAM_DIR + "LocationsV2Histogram.csv"
     TITLE = "LOCATIONS"
     OUTFILE = HTML_DIR + "locations.html"
-    TABLE1 = "V1LOCATIONS"
-    TABLE2 = "V2ENHANCEDLOCATIONS"
+    TABLE1 = "V1LOCATIONS counts"
 
     # Read histogram into list
+    logging.info("reading " + HISTOGRAM_FILE1)
     with open(HISTOGRAM_FILE1) as f:
         gcam_lines = f.read().splitlines()   
-
-    # find the highest score (line 1)
-    entries = gcam_lines[0].split("\t")
-    high_score_str = entries[1].strip()
-    high_score = float(high_score_str)
-    
 
     # build histo dict
     hist_dict = {}
     for line in gcam_lines:
         entries = line.split("\t")
         location = entries[0].strip()
-        score = entries[1].strip()
-        key = location + " : " + score
-        percent = math.ceil((float(score) / high_score) * 100)
-        value = str(percent)
-        hist_dict[key] = value
+        score = int(entries[1].strip())
+        hist_dict[location] = score
 
-
-    html = write_header(TITLE)
-
-    html.append(' <table style="width:100%">')
-    html.append('  <tr>') # ROW
-
-    # TABLE COLUMN 1
-    html.append('   <td>')
-    html.append('    <dl>')
-    
-    table1_title = TABLE1 + "   qty: " + str(len(hist_dict))
-    html.append(f"     <dt>{table1_title}</dt>")
-
+    # build the datatable
+    dt = '["Feature", "Score"],\n'
     for key, value in hist_dict.items():
-        dd = f'     <dd class="percentage percentage-{value}"><span class="text">{key}</span></dd>'
-        html.append(dd)
+        dt += f'["{key}", {value}],\n'
 
-    html.append('    </dl>')
-    html.append('   </td>')
+    print(dt)
 
-    # space
-    html.append('   <td>&nbsp</td>')
+    # build the title line
+    title_option = f'title: "{TABLE1}",\n'
+    width_option = 'width: 600,\n'
+    height_option = f'height: 100000,\n'
+    bar_option = f'bar: 150,'
+    options = title_option + width_option + height_option + bar_option
+    print(options)
 
-    # TABLE COLUMN 2    
-    html.append('   <td>')
-    html.append('    <dl>')
-    html.append(f"     <dt>{table1_title}</dt>")
+    # read the template
+    with open(TEMPLATE_FILE) as f:
+        html = f.read()
 
-    if NUM_TABLES == 2:
-        for key, value in hist_dict.items():
-            dd = f'     <dd class="percentage percentage-{value}"><span class="text">{key}</span></dd>'
-            html.append(dd)
-       
-    html.append('   </td>')
+    html = html.replace("//%DATA_TABLE", dt, 1)
+    html = html.replace("//%OPTIONS", options, 1)
 
-    html.append('  </tr>')  # END ROW
-    html.append(' </table>')
-  
-
-    # CLOSING HTML
-    footer = write_footer()
-    for line in footer:
-        html.append(line)
-
-    logging.info("writing html")
+    logging.info("writing " + OUTFILE)
     with open(OUTFILE, 'w') as f:
-        for line in html:
-            f.writelines(line + "\n")
+        f.write(html)
 
 if __name__ == '__main__':
     main()
