@@ -45,6 +45,7 @@ def main():
             i = i.strip()
             if len(i) > 1:
                 ii = i.split(',')[0]
+                ii = ii.strip()
                 if ii in items_dict:
                     items_dict[ii] += 1
                 else:
@@ -57,7 +58,7 @@ def main():
     items_hist_df = items_hist_df.sort_values(by=0, ascending=False)
 
     #print(str(themes_hist_df.head(500)))
-    outfile = ARMY_GKG_DAILY_DIR + "Orgsv2Histogram.csv"
+    outfile = ARMY_GKG_DAILY_DIR + "OrgsV2Histogram.csv"
     logging.info("writing " + outfile)
     items_hist_df.to_csv(outfile, header=False, sep="\t")
 

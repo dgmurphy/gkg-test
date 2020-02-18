@@ -45,6 +45,7 @@ def main():
             i = i.strip()
             if len(i) > 1:
                 ii = i.split(',')[0]
+                ii = ii.strip()
                 if ii in items_dict:
                     items_dict[ii] += 1
                 else:

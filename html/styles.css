@@ -3,6 +3,15 @@ html, body {
   font-size: .9em;
 }
 
+.page-title {
+    width:100%;
+    background-color: rgb(169, 189, 169);
+    padding:2px 0 10px 24px;
+}
+
+.page-container {
+    margin-left: 50px;
+}
 
 .feature {
     width:200px;
@@ -14,6 +23,10 @@ html, body {
 
 .score-bar {
     background-color: darkolivegreen;   
+}
+
+.score-bar-neg {
+    background-color: darkred;   
 }
 
 .score {
@@ -35,4 +48,39 @@ caption {
     padding: 10px;
     font-size: 1em;
     font-weight: bold;
+    text-align: center;
+}
+
+.hlist caption {
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.hlist td {
+    vertical-align: top;
+    padding: 0 20px 10px 0;
+}
+
+.hlist td:first-of-type {
+    width: 20%;
+}
+
+
+.hlist {
+    width: 70%;
+}
+
+.top-ten-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.notice {
+    font-weight: bold;
+    color: blue;
+}
+
+.discussion {
+    width: 60%;
 }

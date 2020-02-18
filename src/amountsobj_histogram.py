@@ -45,6 +45,7 @@ def main():
             i = i.strip()
             if len(i) > 1:
                 ii = i.split(',')[1]     # subfield of entity
+                ii = ii.strip()
                 if len(ii) > 1:
                     if ii in items_dict:
                         items_dict[ii] += 1

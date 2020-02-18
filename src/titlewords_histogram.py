@@ -85,7 +85,7 @@ def main():
     items_hist_df = items_hist_df.sort_values(by=0, ascending=False)
 
     #print(str(themes_hist_df.head(500)))
-    outfile = ARMY_GKG_DAILY_DIR + "TitleWords_Histogram.csv"
+    outfile = ARMY_GKG_DAILY_DIR + "TitleWordsHistogram.csv"
     logging.info("writing " + outfile)
     items_hist_df.to_csv(outfile, header=False, sep="\t")
 

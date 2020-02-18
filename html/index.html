@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GKG Exploratory Data Analysis</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+</head>
+
+<!-- https://www.fox2detroit.com/news/high-water-levels-are-wreaking-havoc-in-the-great-lakes-swamping-communities -->
+
+<body>
+    <div class="page-title">
+        <h1> GKG Exploratory Data Analysis</h1>
+        <h2> Collected 1-FEB-2020 through 16-FEB-2020</h2>
+        <h2> Filtered on: Organization = US Army (5464 entries)</h2>
+    </div>
+
+    <div class="page-container">
+
+        <h2> Discussion</h2>
+        <div class="discussion">
+            <p>
+                The <a href="https://blog.gdeltproject.org/gdelt-2-0-our-global-world-in-realtime/>">
+                Global Knowledge Graph</a> (GKG) is a news-collection service by Google that
+                makes news-digests available in a structured format.  This page displays the results
+                of 10 features from 5464 such digests related to 'US Army' collected over a two-week period. <br><br>
+                Notice some outliers in <span class="notice">bold blue</span> in the Top Ten lists that might indicate
+                an event that is unusual. The persons and places involved are not typical for
+                headline news involving the Army. <a href="#water-levels">Scroll to the bottom</a> for a link 
+                to an article about the event that these indicators are probably referring to.
+            </p>
+        </div>
+
+        <table class="hlist">
+            <caption>Full Histograms for GKG Features:</caption>
+
+
+            <tr>
+                    <td>
+                        <div><a href="./organizations.html">Organizations</a></div>
+                    </td>
+                    <td>
+                        <div> All company and organization names found in the text</div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                        <td>
+                            <div><a href="./locations.html">Locations</a></div>
+                        </td>
+                        <td>
+                            <div>All locations found in the text (Location FullName Field)</div>
+                        </td>
+                    </tr>
+        
+    
+            <tr>
+                <td>
+                    <div><a href="./persons.html">Persons</a></div>
+                </td>
+                <td>
+                    <div>All person names found in the text</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div><a href="./themes.html">Themes</a></div>
+                </td>
+                <td>
+                    <div> All GKG themes referenced in the documents (not GCAM)</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div><a href="./allnames.html">Proper Names</a></div>
+                </td>
+                <td>
+                    <div> All proper names referenced in the documents</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div><a href="./wordsintitle.html">Title Words</a></div>
+                </td>
+                <td>
+                    <div> A list of words occurring in the document titles</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div><a href="./gcam.html">GCAM</a></div>
+                </td>
+                <td>
+                    <div> List of the names of the GCAM "dimensions" that were found
+                        in the articles.
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div><a href="./sources.html">Document Sources</a></div>
+                </td>
+                <td>
+                    <div> For web URLs this field will contain the toplevel domain</div>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    <div><a href="./counts_objects.html">Counts</a></div>
+                </td>
+                <td>
+                    <div> List of "Object Types" referenced in the GKG 'Counts' fields. For example,
+                        a mention of “20 Christian missionaries were arrested” will
+                        result in “Christian missionaries” being captured here.</div>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>
+                    <div><a href="./amountsobjects.html">Amounts</a></div>
+                </td>
+                <td>
+                    <div> List of "Object Types" referenced in the GKG 'Amounts' fields.
+                        Similar to "Counts" but typically returns units of measurment.
+                    </div>
+                </td>
+            </tr>
+
+
+
+
+        </table>
+
+        <!--   **************   TOP TEN ********************  -->
+        <div class="top-ten">
+            <h2>Top 10 Lists:</h2>
+            <p> The ten highest scoring (most frequently occurring) terms in each feature. </p>
+
+
+                <!-- ***************  ORGANIZATIONS TOP 10 *********************** -->
+                <p class="top-ten-title">TOP 10 ORGANIZATIONS</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+                        <!--    ORGANIZATIONS  -->
+                        <table>
+                            <caption>V1ORGANIZATIONS occurrences (10101 orgs)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">u s army</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">3006</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">u s army corps of engineers</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:87px;">
+                                        <p class="score" style="left: 92px;">1304</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">united states</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:71px;">
+                                        <p class="score" style="left: 76px;">1063</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">white house</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:35px;">
+                                        <p class="score" style="left: 40px;">524</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">associated press</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:33px;">
+                                        <p class="score" style="left: 38px;">489</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">department of defense</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:22px;">
+                                        <p class="score" style="left: 27px;">322</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">facebook</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:20px;">
+                                        <p class="score" style="left: 25px;">288</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">twitter</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:20px;">
+                                        <p class="score" style="left: 25px;">286</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">army corps</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:18px;">
+                                        <p class="score" style="left: 23px;">264</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">u s navy</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:17px;">
+                                        <p class="score" style="left: 22px;">244</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+
+                        <table>
+                            <caption>V2ENHANCEDORGANIZATIONS occurrences (8346 orgs)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">11617</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">White House</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:28px;">
+                                        <p class="score" style="left: 33px;">1581</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Supreme Court</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:14px;">
+                                        <p class="score" style="left: 19px;">773</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Army Corps</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:13px;">
+                                        <p class="score" style="left: 18px;">735</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Associated Press</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:12px;">
+                                        <p class="score" style="left: 17px;">652</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Facebook</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:10px;">
+                                        <p class="score" style="left: 15px;">571</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">National Guard</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:9px;">
+                                        <p class="score" style="left: 14px;">485</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Department Of Defense</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:8px;">
+                                        <p class="score" style="left: 13px;">428</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Morrison</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:7px;">
+                                        <p class="score" style="left: 12px;">390</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Twitter</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:7px;">
+                                        <p class="score" style="left: 12px;">382</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+
+
+                <!-- ***************  LOCATIONS TOP 10 *********************** -->
+                <p class="top-ten-title">TOP 10 LOCATIONS</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+                        <!--    PERSONS  -->
+                        <table>
+                            <caption>V1LOCATIONS occurrences (4388 locations)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">2665</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Washington, Washington, United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:81px;">
+                                        <p class="score" style="left: 86px;">1073</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Iraq</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:51px;">
+                                        <p class="score" style="left: 56px;">669</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">Michigan, United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:50px;">
+                                        <p class="score" style="left: 55px;">660</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">New York, United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:48px;">
+                                        <p class="score" style="left: 53px;">628</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">China</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:47px;">
+                                        <p class="score" style="left: 52px;">618</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Texas, United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:45px;">
+                                        <p class="score" style="left: 50px;">594</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Afghanistan</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:44px;">
+                                        <p class="score" style="left: 49px;">573</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Florida, United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:40px;">
+                                        <p class="score" style="left: 45px;">533</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Germany</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:40px;">
+                                        <p class="score" style="left: 45px;">527</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+
+                        <table>
+                            <caption>V2ENHANCEDLOCATIONS occurrences (4393 locations)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">12826</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">American</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:92px;">
+                                        <p class="score" style="left: 97px;">5889</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">Michigan, United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:59px;">
+                                        <p class="score" style="left: 64px;">3764</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">China</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:41px;">
+                                        <p class="score" style="left: 46px;">2601</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">America</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:40px;">
+                                        <p class="score" style="left: 45px;">2551</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Afghanistan</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:40px;">
+                                        <p class="score" style="left: 45px;">2534</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Japan</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:35px;">
+                                        <p class="score" style="left: 40px;">2242</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Canada</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:29px;">
+                                        <p class="score" style="left: 34px;">1837</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Washington, Washington, United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:28px;">
+                                        <p class="score" style="left: 33px;">1785</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Americans</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:28px;">
+                                        <p class="score" style="left: 33px;">1782</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+
+
+                <p class="top-ten-title">TOP 10 PERSONS</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+                        <!--    PERSONS  -->
+                        <table>
+                            <caption>V1PERSONS occurrences (13815 persons)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">donald trump</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">659</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">alexander vindman</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:66px;">
+                                        <p class="score" style="left: 71px;">217</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">joe biden</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:61px;">
+                                        <p class="score" style="left: 66px;">199</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">john mcglohon</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:54px;">
+                                        <p class="score" style="left: 59px;">175</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">lakes huron</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:48px;">
+                                        <p class="score" style="left: 53px;">156</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">herasanna richards</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:45px;">
+                                        <p class="score" style="left: 50px;">148</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">ethan theuerkauf</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:45px;">
+                                        <p class="score" style="left: 50px;">148</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">don olendorf</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:45px;">
+                                        <p class="score" style="left: 50px;">148</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">mark esper</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:45px;">
+                                        <p class="score" style="left: 50px;">147</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">rita alton</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:44px;">
+                                        <p class="score" style="left: 49px;">143</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+
+                        <table>
+                            <caption>V2ENHANCEDPERSONS occurrences (12762 persons)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">Donald Trump</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">891</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Alexander Vindman</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:105px;">
+                                        <p class="score" style="left: 110px;">465</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">George Washington</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:99px;">
+                                        <p class="score" style="left: 104px;">440</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">James Madison</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:73px;">
+                                        <p class="score" style="left: 78px;">324</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Thomas Jefferson</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:66px;">
+                                        <p class="score" style="left: 71px;">293</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">John Adams</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:65px;">
+                                        <p class="score" style="left: 70px;">286</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Max Schachter</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:60px;">
+                                        <p class="score" style="left: 65px;">265</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Abraham Lincoln</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:58px;">
+                                        <p class="score" style="left: 63px;">256</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Benjamin Franklin</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:55px;">
+                                        <p class="score" style="left: 60px;">241</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Joe Biden</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:51px;">
+                                        <p class="score" style="left: 56px;">224</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+
+
+
+
+
+
+
+
+
+
+                <!-- ***************  THEMES TOP 10 *********************** -->
+                <p class="top-ten-title">TOP 10 GKG THEMES</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+
+                        <table>
+                            <caption>V1THEMES occurrences (3578 themes)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">TAX_FNCACT</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">5102</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">MILITARY</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:179px;">
+                                        <p class="score" style="left: 184px;">4564</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">TAX_ETHNICITY</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:104px;">
+                                        <p class="score" style="left: 109px;">2640</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">LEADER</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:100px;">
+                                        <p class="score" style="left: 105px;">2547</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">UNGP_FORESTS_RIVERS_OCEANS</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:100px;">
+                                        <p class="score" style="left: 105px;">2529</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">USPEC_POLITICS_GENERAL1</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:99px;">
+                                        <p class="score" style="left: 104px;">2512</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">SOC_POINTSOFINTEREST</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:98px;">
+                                        <p class="score" style="left: 103px;">2478</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">CRISISLEX_CRISISLEXREC</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:96px;">
+                                        <p class="score" style="left: 101px;">2437</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">EPU_POLICY</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:96px;">
+                                        <p class="score" style="left: 101px;">2436</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">MANMADE_DISASTER_IMPLIED</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:95px;">
+                                        <p class="score" style="left: 100px;">2399</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+
+                        <table>
+                            <caption>V2ENHANCEDTHEMES occurrences (3544 themes)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">MILITARY</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">13361</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">LEADER</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:176px;">
+                                        <p class="score" style="left: 181px;">11740</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">TAX_FNCACT_PRESIDENT</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:162px;">
+                                        <p class="score" style="left: 167px;">10757</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">ARMEDCONFLICT</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:116px;">
+                                        <p class="score" style="left: 121px;">7693</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">EPU_CATS_NATIONAL_SECURITY</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:113px;">
+                                        <p class="score" style="left: 118px;">7501</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">USPEC_POLITICS_GENERAL1</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:111px;">
+                                        <p class="score" style="left: 116px;">7362</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">MANMADE_DISASTER_IMPLIED</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:110px;">
+                                        <p class="score" style="left: 115px;">7297</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">WB_137_WATER</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:78px;">
+                                        <p class="score" style="left: 83px;">5157</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">TAX_ETHNICITY_AMERICAN</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:77px;">
+                                        <p class="score" style="left: 82px;">5134</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">TAX_WORLDFISH_CARP</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:75px;">
+                                        <p class="score" style="left: 80px;">4990</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+
+
+                <!-- ***************  NAMES TOP 10 *********************** -->
+                <p class="top-ten-title">TOP 10 PROPER NAMES</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+
+                        <table>
+                            <caption>V2.1ALLNAMES occurrences (34420 proper names)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">United States</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">3201</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">White House</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:79px;">
+                                        <p class="score" style="left: 84px;">1258</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">World War</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:71px;">
+                                        <p class="score" style="left: 76px;">1125</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">Lake Michigan</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:65px;">
+                                        <p class="score" style="left: 70px;">1035</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">Great Lakes</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:59px;">
+                                        <p class="score" style="left: 64px;">941</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">New York</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:44px;">
+                                        <p class="score" style="left: 49px;">689</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Air Force</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:42px;">
+                                        <p class="score" style="left: 47px;">663</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Mississippi River</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:38px;">
+                                        <p class="score" style="left: 43px;">600</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">North Carolina</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:36px;">
+                                        <p class="score" style="left: 41px;">562</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">President Donald Trump</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:34px;">
+                                        <p class="score" style="left: 39px;">536</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+                        &nbsp;
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+
+                <!-- ***************  TITLE WORDS TOP 10 *********************** -->
+                <p class="top-ten-title">TOP 10 WORDS IN TITLE</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+
+                        <table>
+                            <caption>Occurrences of Words in Title (9016 words)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">US</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">673</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">News</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:162px;">
+                                        <p class="score" style="left: 167px;">543</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Army</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:144px;">
+                                        <p class="score" style="left: 149px;">482</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Trump</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:97px;">
+                                        <p class="score" style="left: 102px;">325</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">new</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:69px;">
+                                        <p class="score" style="left: 74px;">231</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature notice">water</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:63px;">
+                                        <p class="score" style="left: 68px;">210</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">WWII</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:62px;">
+                                        <p class="score" style="left: 67px;">208</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Veteran</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:59px;">
+                                        <p class="score" style="left: 64px;">198</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">support</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:57px;">
+                                        <p class="score" style="left: 62px;">191</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Photo</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:54px;">
+                                        <p class="score" style="left: 59px;">180</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+                        &nbsp;
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+
+
+                <!-- ***************  GCAM TOP 10 *********************** -->
+                <p class="top-ten-title">TOP 10 GCAM DIMENSIONS</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+                        <!--    PERSONS  -->
+                        <table>
+                            <caption>V2GCAM count-based scores (2357 dimensions)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">c2.76 H4Lvd</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">3079724</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">c16.57 factotum</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:160px;">
+                                        <p class="score" style="left: 165px;">2463280</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">c5.62 Funct</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:129px;">
+                                        <p class="score" style="left: 134px;">1979607</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">c2.119 Noun</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:86px;">
+                                        <p class="score" style="left: 91px;">1309420</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">c17.1 ADJ/ALL</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:79px;">
+                                        <p class="score" style="left: 84px;">1214840</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">c17.4 ADV/ALL</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:65px;">
+                                        <p class="score" style="left: 70px;">990416</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">c2.185 SUPV</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:63px;">
+                                        <p class="score" style="left: 68px;">966207</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">c17.5 NOUN/ACT</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:63px;">
+                                        <p class="score" style="left: 68px;">957988</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">c2.147 PREP</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:48px;">
+                                        <p class="score" style="left: 53px;">733517</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">c2.39 DET</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:46px;">
+                                        <p class="score" style="left: 51px;">706881</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+
+                        <table>
+                            <caption>V2GCAM value-based scores (30 dimensions)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">v19.4 Valence (Pleasure) (Men) (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">31240</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">v19.1 Valence (Pleasure) (All) (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">31197</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">v19.7 Valence (Pleasure) (Women) (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">31166</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">v21.1 Happiness (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:189px;">
+                                        <p class="score" style="left: 194px;">29519</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">v19.6 Dominance (Men) (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:188px;">
+                                        <p class="score" style="left: 193px;">29268</p>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="feature">v20.2 Level1Negative (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar-neg" style="width:6px;">
+                                        <p class="score" style="left: 11px;">-808</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">v20.4 Level2Negative (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar-neg" style="width:9px;">
+                                        <p class="score" style="left: 14px;">-1348</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">v20.16 Level8Negative (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar-neg" style="width:13px;">
+                                        <p class="score" style="left: 18px;">-1920</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">v20.6 Level3Negative (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar-neg" style="width:13px;">
+                                        <p class="score" style="left: 18px;">-2017</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">v20.8 Level4Negative (Scored Value)</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar-neg" style="width:14px;">
+                                        <p class="score" style="left: 19px;">-2185</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+
+
+                <!-- ***************  SOURCES TOP 10 *********************** -->
+                <p class="top-ten-title">TOP 10 SOURCES</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+
+                        <table>
+                            <caption>V2SOURCECOMMONNAME occurrences (2055 sources)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">iheart.com</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">197</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">msn.com</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:83px;">
+                                        <p class="score" style="left: 88px;">81</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">yahoo.com</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:72px;">
+                                        <p class="score" style="left: 77px;">70</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">nationalinterest.org</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:66px;">
+                                        <p class="score" style="left: 71px;">65</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">army.mil</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:65px;">
+                                        <p class="score" style="left: 70px;">64</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">stripes.com</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:44px;">
+                                        <p class="score" style="left: 49px;">43</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">dvidshub.net</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:38px;">
+                                        <p class="score" style="left: 43px;">37</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">marshallcenter.org</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:37px;">
+                                        <p class="score" style="left: 42px;">36</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">chron.com</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:35px;">
+                                        <p class="score" style="left: 40px;">34</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">af.mil</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:34px;">
+                                        <p class="score" style="left: 39px;">33</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+                        &nbsp;
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+
+
+                <!-- ***************  COUNTED OBJECTS *********************** -->
+                <p class="top-ten-title">TOP 10 COUNTED OBJECTS</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+
+                        <table>
+                            <caption>V2.1COUNTS (Object Type) occurrences (215 object types)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">thers</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">184</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">soldiers</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:148px;">
+                                        <p class="score" style="left: 153px;">136</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">American soldiers</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:122px;">
+                                        <p class="score" style="left: 127px;">112</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Americans</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:83px;">
+                                        <p class="score" style="left: 88px;">76</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">brave members</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:61px;">
+                                        <p class="score" style="left: 66px;">56</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">men</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:52px;">
+                                        <p class="score" style="left: 57px;">47</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">patients</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:52px;">
+                                        <p class="score" style="left: 57px;">47</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">SFG soldiers</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:33px;">
+                                        <p class="score" style="left: 38px;">30</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Group troops</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:31px;">
+                                        <p class="score" style="left: 36px;">28</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">Vagos</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:27px;">
+                                        <p class="score" style="left: 32px;">24</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+                        &nbsp;
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+
+                <!-- ***************  MEASURED OBJECTS *********************** -->
+                <p class="top-ten-title">TOP 10 MEASURED AMOUNTS OBJECTS</p>
+
+                <div class="flexrow">
+                    <div class="flexcol">
+
+                        <table>
+                            <caption>Occurrences of Objects in Amounts field (9727 objects)</caption>
+                            <tr>
+                                <td>
+                                    <div class="feature">dollars</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:200px;">
+                                        <p class="score" style="left: 205px;">3159</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">mins</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:57px;">
+                                        <p class="score" style="left: 62px;">895</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">feet</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:55px;">
+                                        <p class="score" style="left: 60px;">865</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">pounds</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:52px;">
+                                        <p class="score" style="left: 57px;">814</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">meters</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:28px;">
+                                        <p class="score" style="left: 33px;">431</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">months</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:28px;">
+                                        <p class="score" style="left: 33px;">430</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">kilograms</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:24px;">
+                                        <p class="score" style="left: 29px;">371</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">states</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:23px;">
+                                        <p class="score" style="left: 28px;">349</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">people</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:20px;">
+                                        <p class="score" style="left: 25px;">308</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="feature">miles</div>
+                                </td>
+                                <td>
+                                    <div class="score-bar" style="width:19px;">
+                                        <p class="score" style="left: 24px;">292</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                        </table>
+
+
+                    </div>
+                    <div class="flexcol">
+
+                        &nbsp;
+
+                    </div> <!-- flexcol -->
+                </div> <!-- flexrow-->
+
+        </div> <!-- top ten -->
+
+    <a name="water-levels">
+    <div>
+        <p class="top-ten-title">Article: Army Core of Engineers Measures Record Water Levels in Michigan</p>
+        <a target=”_blank” href="https://www.fox2detroit.com/news/high-water-levels-are-wreaking-havoc-in-the-great-lakes-swamping-communities">
+        Fox 2 News Detroit
+        </a>
+    </div>
+    </a>
+    </div> <!-- page container -->
+
+</body>
+
+</html>
