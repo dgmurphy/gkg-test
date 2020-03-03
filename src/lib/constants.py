@@ -11,6 +11,7 @@ STOPWORDS_FILE = DATA_DIR + "english_stopwords.txt"
 GCAM_CODEBOOK = DATA_DIR + "GCAM-MASTER-CODEBOOK.TXT"
 HISTOGRAM_DIR = "../histograms/"
 HTML_DIR = "../html/"
+GRAPH_DIR = "../graph/"
 
 GKG_COLUMN_NAMES = ["GKGRECORDID", 
                     "V2.1DATE", 

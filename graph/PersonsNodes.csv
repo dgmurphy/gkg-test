@@ -1,0 +1,513 @@
+id;label;value
+28;barack obama;19
+213;ulysses s grant;15
+199;lesley gore;14
+196;fulgencio batista;14
+194;lorena rojas;14
+211;cardinal theodore mccarrick;14
+208;fidel castro;14
+195;abdul ghani baradar;13
+271;abdul ghani baradar behr-uh-dahr;12
+96;donald trump;10
+273;pablo martinez monsivais;8
+272;theodore mccarrick;8
+215;rankin fite;6
+214;william katt;6
+200;tom bevill;6
+216;cathy freeman;6
+217;barbara w tuchman;6
+201;danielle haim;6
+212;sarah clarke;6
+210;andy taylor;6
+203;levar burton;6
+193;lisa loring;6
+207;famer john mcenroe;6
+206;chloe wepper;6
+205;elizabeth olsen;6
+204;mike weinberg;6
+198;mahershala ali;6
+209;jeremy bulloch;6
+197;sam salter;6
+202;peggy king;6
+99;james madison;4
+107;martin luther king jr;4
+81;george w bush;4
+267;qassem soleimani;4
+89;thomas jefferson;4
+83;george washington;4
+106;ronald reagan;4
+77;atlantic ocean;4
+76;roger sherman;3
+86;woodrow wilson;3
+93;hillary j clinton;3
+92;franklin roosevelt;3
+91;richard m nixon;3
+90;george h w bush;3
+430;kendra finfrock;3
+88;herbert hoover;3
+87;francis scott key;3
+85;lady liberty;3
+109;john wilkes booth;3
+84;susan b anthony;3
+374;richard nixon;3
+82;thomas paine;3
+384;hillary clinton;3
+80;martin van buren;3
+79;john adams;3
+78;mary ball washington;3
+94;roger livingston;3
+431;kristie rogers;3
+95;pacific ocean;3
+432;kristian finfrock;3
+108;charles pinckney;3
+111;rosa parks;3
+112;john stafford smith;3
+105;joseph stalin;3
+104;barack h obama;3
+103;john g roberts;3
+102;robert sherman;3
+101;harry s truman;3
+113;dwight d eisenhower;3
+114;benjamin franklin;3
+98;abraham lincoln;3
+115;frederick muhlenberg;3
+116;alexander hamilton;3
+117;francis bellamy;3
+97;franklin delano roosevelt;3
+110;william paterson;3
+0;karen armstrong;3
+75;nancy pelosi;3
+300;shakeb rohin;3
+2;john bel edwards;3
+3;david j mitchell;3
+4;lyman kyle fleniken;3
+5;hunter tynes;3
+6;matthew roe;3
+7;ricky boyett;3
+8;lisa tynes;3
+9;valarie hodges;3
+303;amin mohammadi;3
+302;abdul shakor ahmadi;3
+301;khairullah khairkhwa;3
+100;samuel osgood;3
+1;shauna sanford;3
+373;charles krulak;2
+371;henry kissinger;2
+376;pete hegseth;2
+375;louis gohmert;2
+151;david petraeus;2
+150;david pareya;2
+149;george brinegar;2
+148;tommy muska;2
+372;mathew golsteyn;2
+370;edward gallagher;2
+234;dennis yackus;2
+369;michael behenna;2
+368;duncan hunter jr;2
+367;aubrey daniels;2
+433;brad parscale;2
+434;jessie liu;2
+435;mccabe rosenstein;2
+436;orville r bacher;2
+377;george c marshall;2
+378;joel brammeier;2
+438;alec guiness;2
+232;laura rousseau;2
+381;ron brooks;2
+380;greg conover;2
+223;catherine keener;2
+224;robert mcnamara;2
+225;rosanna arquette;2
+226;viet cong;2
+227;jane fonda;2
+228;donald sutherland;2
+229;sam waterston;2
+163;lamar alexander;2
+162;richard burr;2
+161;tyreece miller;2
+160;states marshal;2
+230;illeana douglas;2
+231;decenso jr;2
+437;andrew johnson;2
+429;george mansfield;2
+439;bryan alexander;2
+365;william calley;2
+266;colin powell;2
+270;jesus christ;2
+440;james alan groome;2
+334;anna mae hays;2
+333;frederick douglass;2
+332;elizabeth cady stanton;2
+34;sean roberts;2
+33;dan sullivan;2
+32;gail melgren;2
+364;martin dempsey;2
+35;christie barnhart;2
+366;clint lorance;2
+445;nick murray;2
+446;bernie sanders;2
+443;pete buttigieg;2
+444;cory booker;2
+442;tulsi gabbard;2
+441;marianne williamson;2
+321;bo derek;1
+322;dwyane wade;1
+318;ahmed mohamed islam;1
+320;bob marley;1
+351;rob burkybile;1
+323;gabrielle union;1
+352;hank ebinger;1
+353;cheewa james;1
+354;blake follis;1
+319;ahmed mohamed islam madobe;1
+316;diego garcia;1
+317;abdishukri haybe;1
+315;indian ocean;1
+361;emily bingham;1
+360;juan vazquez;1
+359;etelvina strickland;1
+314;al qaeda;1
+325;deandre arnold;1
+358;larissa bobowski;1
+355;ramezan sharif;1
+356;qasem soleimani;1
+348;beth avey;1
+357;abu mahdi al-muhandis;1
+324;richard j reddick;1
+343;rand paul;1
+383;angie yu;1
+336;jeffery paul owens;1
+329;alfred tennyson;1
+328;jim webber;1
+327;joan webber stephen;1
+362;steven bobowski;1
+349;brett guthrie;1
+326;joan webber;1
+363;stephen bobowski;1
+330;terrence ryan;1
+331;mama cass;1
+335;rilan parker owens;1
+337;parker owens;1
+382;duane chapman;1
+338;larry king;1
+339;maude owens;1
+340;kaylie moore;1
+341;dave lohr;1
+342;ray springsteen;1
+344;timothy j maude;1
+345;jim iacocca;1
+346;harry berry;1
+379;lakes erie;1
+347;mitch mcconnell;1
+350;nick macy;1
+417;alex gardner;1
+385;teddy roosevelt;1
+472;ray corniel;1
+483;max schachter;1
+482;cara loughran;1
+481;lindsay fontana;1
+480;samantha grady;1
+479;nicholas dworet;1
+478;manuel oliver;1
+477;lori alhadeff;1
+476;miguel duque;1
+475;aiden ortiz;1
+474;jaime guttenberg;1
+473;alexander kaminsky;1
+471;jeff bretzer;1
+458;michele conley;1
+470;mackenzie mirsky;1
+469;joaquin oliver;1
+468;carmen schentrup;1
+467;fred guttenberg;1
+466;zelalem befekadu;1
+465;molla hailemariam;1
+464;mark a milley;1
+463;roger l cloutier jr;1
+462;addis ababa;1
+461;augusta waterville;1
+460;ruthie schlabach;1
+484;laurie thomas;1
+485;dwayne wade;1
+486;karlos valentin;1
+487;debbie hixon;1
+510;karen diefendorf;1
+509;farah siddiqui;1
+508;helena ramsay;1
+507;brandon corona;1
+506;gena hoyer;1
+505;jamie daria;1
+504;mitch dworet;1
+503;peter wang;1
+502;lauderdale king david;1
+501;chris hixon;1
+500;gina montalto;1
+499;jennifer montalto;1
+498;dan jacob;1
+497;joan cox;1
+496;jake maisner;1
+495;alyssa alhadeff;1
+494;alex schachter;1
+493;luke hoyer;1
+492;harry potter;1
+491;aaron feis;1
+490;ryan mackman;1
+489;martin duque anguiano;1
+488;katherine dadd;1
+459;george durham;1
+457;caroline quintanilla;1
+386;chester arthur;1
+399;harry nomburg;1
+410;stephanie woodcook;1
+409;andrew m stroth;1
+408;jon herzog;1
+407;lansdale luxor;1
+406;hawkins charlton;1
+405;carole farrell;1
+404;jack hansen;1
+403;denton burnell;1
+402;carrie hawkins charlton;1
+401;joe clement;1
+400;tom tugend;1
+398;sherman oaks;1
+456;eva adams;1
+397;robin williams;1
+396;vince fricilone;1
+395;toby keith;1
+394;jon neal;1
+393;lance armstrong;1
+392;andrew cruz;1
+391;jeff harrington;1
+390;deng xiaoping;1
+389;unquachog indian;1
+388;james garfield;1
+387;julia gardiner;1
+411;ronda mcgowan;1
+412;lee babb;1
+413;kaylee babb;1
+414;robert e franz jr;1
+455;sigi strak;1
+454;columbus hall;1
+453;holland america westerdam;1
+452;commodore paul herber;1
+451;lynwood taliaferro;1
+450;lavonne taliaferro;1
+449;james w baldwin;1
+448;hannah scruggs;1
+447;george alexie;1
+428;bonhomme richard;1
+427;frank cable;1
+426;nathan webster;1
+425;david watters;1
+424;heidi bostic;1
+423;erika mantz;1
+422;jeb bradley;1
+421;leonard garvey;1
+420;meghan douglass;1
+419;mike enzi;1
+418;connor babb;1
+312;stephen townsend;1
+416;brian babb;1
+415;pete kerns;1
+313;al shabaab;1
+256;john r anderson jr;1
+311;stephen j townsend;1
+119;ricky moore;1
+129;stuart henry jr;1
+128;spencer baird;1
+127;john bagley;1
+126;shelbie baird;1
+125;thomas tom edward;1
+124;harold alfred;1
+123;charlotte amelia ault hill;1
+122;greg shreve;1
+121;john sigman;1
+120;clarissa stevenson;1
+118;lyle skelton;1
+310;donald yamamoto;1
+74;susan l taylor;1
+73;lady chirlane mccray;1
+72;jonelle procope;1
+71;michele s jones;1
+70;johnnetta betsch cole;1
+69;chaz ebert;1
+68;carla harris;1
+67;wanda m austin;1
+66;paula j giddings;1
+65;ursula burns;1
+130;baird scott;1
+131;miguel acosta;1
+132;jean cook;1
+133;barry bush;1
+158;sidney goudy;1
+157;uncle sam;1
+156;richard dale;1
+155;samantha robertson walden;1
+154;lanning walden;1
+153;kenneth e ken;1
+152;daniel webb walden;1
+147;kay bouton;1
+146;linda cooke;1
+145;frank sinatra;1
+144;roland bush anderton;1
+143;alice jean anderton;1
+142;william a leitner;1
+141;lula o anderton;1
+140;tori cooke;1
+139;debbie cook;1
+138;donna kyle anderton;1
+137;judith cooke anderton;1
+136;nova t kyle;1
+135;judith cooke;1
+134;peggy jean anderton;1
+64;cheryl boone isaacs;1
+63;chirlane mccray;1
+62;andrea frazier;1
+37;treena d witte;1
+31;muhammad kareem atal;1
+30;chester j mcbride;1
+29;joseph g lemm;1
+27;dawlat waziri;1
+26;peter w taub;1
+25;adrianna m vorderbruggen;1
+24;josh earnest;1
+23;mohammad omar;1
+22;william shoffner;1
+21;ashraf ghani;1
+20;akhtar mansoor;1
+19;louis m bonacasa;1
+18;mohammad jan rasulyar;1
+17;michael a cinco;1
+16;nicholas stange;1
+15;casa grande;1
+14;shaquil manigault;1
+13;clarence williams;1
+12;kyra newnam;1
+11;john tuttle;1
+10;chandlor ralston;1
+36;carter f smith;1
+38;anthony a braga;1
+61;darren walker;1
+39;monk eastman;1
+60;thelma golden;1
+59;joycelyn elders;1
+58;sherrilyn ifill;1
+57;bethann hardison;1
+56;loida lewis;1
+55;julieanna richardson;1
+54;valerie jarrett;1
+53;stephen c p wong;1
+52;bill sanders;1
+51;robert j bunker;1
+50;george w knox;1
+49;john p sullivan;1
+48;ebenezer macintosh;1
+47;terri l simon;1
+46;southeastunited statesgang;1
+45;frank lucas;1
+44;degiang gu;1
+43;rowman littlefield;1
+42;ku klux klan;1
+41;david c pyrooz;1
+40;samuel ross mason;1
+159;andrew goudy;1
+164;steve pam;1
+165;megan matt engle;1
+282;tomi murrell;1
+280;martin estacio;1
+279;edward headington;1
+278;grace bedell;1
+277;robert e lee;1
+276;robert broski;1
+275;pete swavely;1
+274;rick herodes;1
+269;christopher gadberry;1
+268;joe mccarthy;1
+265;ernst david;1
+264;golda meir;1
+263;nick delrosso;1
+262;joanne lengyel anderson;1
+261;william j skowronski;1
+260;john r anderson;1
+259;carol skowronski anderson;1
+258;kristin m anderson;1
+257;karin pellett;1
+255;frank pomeroy;1
+254;keith nelson;1
+253;terry johnson;1
+281;paul lewanski;1
+283;kalahale murrell;1
+251;williams jr;1
+284;miyo koba;1
+309;h e donald yamamoto;1
+308;lucas tomlinson;1
+307;antonio rey rodriguez;1
+306;nick givas;1
+305;john w sannes;1
+304;sonny leggett;1
+299;steven ozeran;1
+298;fusakichi frank konishi;1
+297;dianna lineberry bret watson;1
+296;fumi nakamura;1
+295;margie hattori;1
+294;justin lineberry amber;1
+293;cody jeffreys;1
+292;meghan jeffreys;1
+291;tomi fujimoto;1
+290;joshua jeffreys;1
+289;jacob lineberry;1
+288;yuri kikuchi;1
+287;joe konishi;1
+286;kiyo osumi;1
+285;ichiro konishi;1
+252;ben shepperd;1
+250;tim leach;1
+166;riva ridge;1
+189;mohammed fahim;1
+187;hugh evans;1
+186;mckay jenkins;1
+185;mount terminale;1
+184;denis nunan;1
+183;bob parker;1
+182;howard koch;1
+181;john magrath;1
+180;sarge brown;1
+179;dan l kennerly;1
+178;hitler europe;1
+177;jack tweedy;1
+176;pete seibert;1
+175;david leach;1
+174;john hay;1
+173;abbie kealy;1
+172;chris dillmann;1
+171;benito mussolini;1
+170;henry j hampton;1
+169;dan kennerly;1
+168;maurice isserman;1
+167;pete jr;1
+188;tricia swenson;1
+190;harold j greene;1
+249;greg abbott;1
+191;nasrat rahimi;1
+248;claydesta plaza;1
+247;claytie williams;1
+246;clayton williams jr;1
+245;clayton william;1
+244;ken herman;1
+243;karen hood;1
+242;tom craddick;1
+241;ann richards;1
+240;paul canton;1
+239;elizabeth ricci;1
+238;omar smith;1
+237;alex runtchke;1
+236;corporal canton;1
+235;shane harris;1
+233;frank decenso jr;1
+222;santa anna;1
+221;ben mcculloch;1
+220;david e twiggs;1
+219;ranger ben mcculloch;1
+218;winfield scott;1
+192;rahmat gul;1
+511;nick fish;1

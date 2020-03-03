@@ -31,10 +31,8 @@ def main():
 
     logging.info("consolidated df shape: " + str(df.shape))
 
-    # build a list of the V1THEMES column
+    # build a list of the V1PERSONS column
     item_list = df['V1PERSONS'].tolist()
-    #print(f"themes list length: " + str(len(themes_list)))
-    #print(themes_list[10])
 
 
     items_dict = {}
