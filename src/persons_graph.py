@@ -168,6 +168,7 @@ def main():
     for line in persons_rows:
         doc_edge_list = make_doc_edge_list(persons_dict, line)
         #write_edge_list(doc_edge_list)
+        # SLOW?
         big_edge_list = update_edge_list(doc_edge_list, big_edge_list)
 
         rows_processed += 1
