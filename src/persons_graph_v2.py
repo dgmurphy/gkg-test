@@ -13,7 +13,22 @@ from collections import Counter
 import csv
 
 
-def make_persons_set(persons_line):
+# return persons set from a string of gkg v1 persons
+def get_persons_set(persons_line):
+
+    persons_set = set()
+    l = persons_line.strip()
+    person_list = l.split(";")
+    
+    for person in person_list:
+        person = person.strip()
+        if len(person) > 1:
+            persons_set.add(person)
+
+    return persons_set
+
+
+def make_persons_pairs(persons_line):
 
     persons_set = set()
     l = persons_line.strip()
@@ -56,6 +71,44 @@ def main():
     logging.info("consolidated df shape: " + str(df.shape))
 
 
+    # ------ create person nodes (TODO this can be made faster) --------
+    persons_rows = df['V1PERSONS'].tolist()
+    persons_dict = {}
+
+    # assign person IDs
+    pid = 0
+    persons_set = set()
+    for line in persons_rows:
+        persons_set = get_persons_set(line)
+
+        for person in persons_set:
+            if person in persons_dict.keys():
+                values = persons_dict[person]
+                node_size = values[0]
+                person_id = values[1]
+                persons_dict[person] = [node_size + 1, person_id]
+
+            else:
+                persons_dict[person] = [1, pid]
+                pid += 1
+
+
+    # convert, sort and write person nodes file
+    plist = []
+    for key, value in persons_dict.items():   
+        pl = [value[1], key, value[0]]
+        plist.append(pl)
+
+    node_list_df = pd.DataFrame(plist, columns=['id', 'label', 'value'])
+    node_list_df = node_list_df.sort_values(by=['value'], ascending=False)
+    print(str(node_list_df.head(20)))   
+
+    nodesfile = GRAPH_DIR + "PersonsNodes.csv"
+    logging.info("writing " + nodesfile)
+    node_list_df.to_csv(nodesfile, header=True, index=False, sep=";")    
+
+
+    # -------------------- Build edge list ------------------------------------
         # DEBUG
     # persons_rows = []
     # persons_rows.append("n1; n2; n3; n4")
@@ -73,10 +126,11 @@ def main():
     #df = pd.DataFrame(gkg_data, columns=GKG_COLUMN_NAMES)
 
     # make persons column into set
-    df['V1PERSONS'] = df.apply(lambda row: make_persons_set(row.V1PERSONS), axis=1)
+    df['V1PERSONS'] = df.apply(lambda row: make_persons_pairs(row.V1PERSONS), axis=1)
 
     # pdf = df[['V1PERSONS']].copy()
     # print(pdf.head())
+    logging.info('creating pairs')
     pairs = []
     persons_list = df['V1PERSONS'].tolist()
     for row in persons_list:
@@ -85,20 +139,20 @@ def main():
             pairs.append(pair_string)
 
     # make one column with all the pairs and value counts
+    logging.info('building edge df')
     pdf = pd.DataFrame()
     pdf["edges"] = pairs
     vc = pdf["edges"].value_counts()
-    #print(str(vc))
-    newdf = pd.DataFrame(vc)
-    print("new df: ")
-    print(newdf.head(20))
+    edge_df = pd.DataFrame(vc)
+    print("edge df: ")
+    print(edge_df.head(20))
 
     #print(str(df.head()))
     #print(str(df['V1PERSONS']))
     
     edgefile = GRAPH_DIR + "PersonsEdgeListSorted.csv"
     logging.info("writing " + edgefile)
-    newdf.to_csv(edgefile, header=True, index=True, sep=",")
+    edge_df.to_csv(edgefile, header=True, index=True, sep=",")
 
     # edgefile = GRAPH_DIR + "PersonsEdgeListSorted.csv"
     # logging.info("writing " + edgefile)
