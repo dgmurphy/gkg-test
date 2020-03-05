@@ -48,33 +48,41 @@ def make_persons_pairs(persons_line):
     return pairs
 
 
-def names_to_ids(row):
-    print(row.name)
-    #print(str(row))
+def names_to_ids(persons_dict, row, idx):
+
+    persons = str(row.name).split(',')
+
+    ids = []
+    for person in persons:
+        person = person.strip()
+        pid = persons_dict[person][1]
+        ids.append(pid)
+    
+    return str(ids[idx])
     
 
 
 def main():
 
-    # # create blank full df
-    # df = pd.DataFrame(columns=GKG_COLUMN_NAMES)
+    # create blank full df
+    df = pd.DataFrame(columns=GKG_COLUMN_NAMES)
 
-    # file_list = glob.glob(ARMY_GKG_DAILY_DIR + "Army_GKG_by_day*.csv")
-    # #file_list = glob.glob(ARMY_GKG_DAILY_DIR + "Army_GKG_by_day_2020-02-16.csv")
+    file_list = glob.glob(ARMY_GKG_DAILY_DIR + "Army_GKG_by_day*.csv")
+    #file_list = glob.glob(ARMY_GKG_DAILY_DIR + "Army_GKG_by_day_2020-02-16.csv")
 
-    # for f in file_list:
+    for f in file_list:
         
-    #     logging.info("reading" + f)
+        logging.info("reading" + f)
 
-    #     # read the file into temp df
-    #     tdf = pd.read_csv(f, header=0, sep='\t', names=GKG_COLUMN_NAMES, 
-    #         index_col=False)
+        # read the file into temp df
+        tdf = pd.read_csv(f, header=0, sep='\t', names=GKG_COLUMN_NAMES, 
+            index_col=False)
 
-    #     # append temp df to full df
-    #     df = df.append(tdf, ignore_index=True)
+        # append temp df to full df
+        df = df.append(tdf, ignore_index=True)
 
 
-    # logging.info("consolidated df shape: " + str(df.shape))
+    logging.info("consolidated df shape: " + str(df.shape))
 
 
     # -------------------------------- DEBUG ------------------------------
@@ -91,7 +99,7 @@ def main():
     ]
 
     # create blank full df
-    df = pd.DataFrame(gkg_data, columns=GKG_COLUMN_NAMES)
+    #df = pd.DataFrame(gkg_data, columns=GKG_COLUMN_NAMES)
 
 
 
@@ -120,16 +128,16 @@ def main():
     # convert, sort and write person nodes file
     plist = []
     for key, value in persons_dict.items():   
-        pl = [value[1], key, value[0]]
+        pl = [value[1], key, value[0]]  # id, label, nodesize
         plist.append(pl)
 
     node_list_df = pd.DataFrame(plist, columns=['id', 'label', 'value'])
     node_list_df = node_list_df.sort_values(by=['value'], ascending=False)
-    print(str(node_list_df.head(20)))   
+    #print(str(node_list_df.head(20)))   
 
     nodesfile = GRAPH_DIR + "PersonsNodes.csv"
     logging.info("writing " + nodesfile)
-    node_list_df.to_csv(nodesfile, header=True, index=False, sep=";")    
+    node_list_df.to_csv(nodesfile, header=True, index=False, sep=",")    
 
 
     # -------------------- Build edge list ------------------------------------
@@ -151,22 +159,30 @@ def main():
     # make one column with all the pairs and value counts
     logging.info('building edge df')
     pdf = pd.DataFrame()
-    pdf["edges"] = pairs
-    vc = pdf["edges"].value_counts()
+    pdf["values"] = pairs
+    vc = pdf["values"].value_counts()
     edge_df = pd.DataFrame(vc)
-    print("edge df: ")
-    print(edge_df.head(20))
+    #print("edge df: ")
+    #print(edge_df.head(20))
 
     #print(str(df.head()))
     #print(str(df['V1PERSONS']))
     
     edgefile = GRAPH_DIR + "PersonsEdgeListSorted.csv"
     logging.info("writing " + edgefile)
-    edge_df.to_csv(edgefile, header=True, index=True, sep=",")
-
+    edge_df.to_csv(edgefile, header=False, index=True, sep=",")
 
     # Write the edge list using node ids instead of names
-    edge_df['ids'] = edge_df.apply(lambda row: names_to_ids(row), axis=1)
+    edge_df['id1'] = edge_df.apply(lambda row: names_to_ids(persons_dict, row, 0), axis=1)
+    edge_df['id2'] = edge_df.apply(lambda row: names_to_ids(persons_dict, row, 1), axis=1)
+    print(edge_df)
+
+    edgeidfile = GRAPH_DIR + "PersonsEdgeIDs.csv"
+    logging.info("writing " + edgeidfile)
+
+    edge_df.to_csv(edgeidfile, columns=['id1', 'id2', 'values'], header=True, index=False, 
+        sep=",")
+
 
     # edgefile = GRAPH_DIR + "PersonsEdgeListSorted.csv"
     # logging.info("writing " + edgefile)
