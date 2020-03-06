@@ -86,7 +86,16 @@ caption {
 }
 
 #mynetwork {
-    width: 600px;
-    height: 600px;
-    border: 1px solid lightgray;
+    margin: auto;
+    width: 95%;
+    height: 900px;
+    font-size: 16px;
   }
+
+.vis-active:focus {
+    outline: none;
+}
+
+.vis-network { 
+    outline: none; 
+}

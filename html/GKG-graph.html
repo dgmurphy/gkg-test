@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>GKG Persons Graph (Top 19 Entities)</title>
+  <link rel="stylesheet" href="./styles.css" type="text/css">
+  <script type="text/javascript" src="./vis-network.min.js"></script>
+ <script type="text/javascript">
+     var nodes = null;
+     var edges = null;
+     var network = null;
+     function draw() {
+nodes = [
+{id: 3, value: 50, label: 'donald trump'},
+{id: 8, value: 16, label: 'alexander vindman'},
+{id: 10, value: 15, label: 'joe biden'},
+{id: 11063, value: 13, label: 'john mcglohon'},
+{id: 177, value: 12, label: 'lakes huron'},
+{id: 172, value: 11, label: 'herasanna richards'},
+{id: 174, value: 11, label: 'ethan theuerkauf'},
+{id: 176, value: 11, label: 'don olendorf'},
+{id: 69, value: 11, label: 'mark esper'},
+{id: 175, value: 11, label: 'rita alton'},
+{id: 833, value: 9, label: 'barack obama'},
+{id: 7, value: 8, label: 'david pressman'},
+{id: 536, value: 8, label: 'tony rankins'},
+{id: 537, value: 7, label: 'raul ortiz'},
+{id: 216, value: 7, label: 'nancy pelosi'},
+{id: 11, value: 6, label: 'yevgeny vindman'},
+{id: 116, value: 6, label: 'martin luther king jr'},
+{id: 12, value: 6, label: 'gordon sondland'},
+{id: 810, value: 5, label: 'george w bush'},
+];
+
+edges = [
+{from: 8, to: 3, value: 10, title: '10'},
+{from: 3, to: 10, value: 10, title: '10'},
+{from: 172, to: 177, value: 8, title: '8'},
+{from: 176, to: 174, value: 8, title: '8'},
+{from: 174, to: 177, value: 8, title: '8'},
+{from: 176, to: 177, value: 8, title: '8'},
+{from: 174, to: 172, value: 8, title: '8'},
+{from: 176, to: 172, value: 8, title: '8'},
+{from: 177, to: 175, value: 8, title: '8'},
+{from: 172, to: 175, value: 8, title: '8'},
+{from: 174, to: 175, value: 8, title: '8'},
+{from: 176, to: 175, value: 8, title: '8'},
+{from: 8, to: 10, value: 6, title: '6'},
+{from: 8, to: 7, value: 6, title: '6'},
+{from: 7, to: 3, value: 6, title: '6'},
+{from: 8, to: 11, value: 5, title: '5'},
+{from: 3, to: 536, value: 4, title: '4'},
+{from: 3, to: 11, value: 4, title: '4'},
+{from: 3, to: 537, value: 4, title: '4'},
+{from: 3, to: 216, value: 4, title: '4'},
+{from: 833, to: 3, value: 4, title: '4'},
+{from: 8, to: 12, value: 4, title: '4'},
+{from: 12, to: 10, value: 4, title: '4'},
+{from: 3, to: 12, value: 4, title: '4'},
+{from: 10, to: 11, value: 3, title: '3'},
+{from: 10, to: 536, value: 3, title: '3'},
+{from: 10, to: 537, value: 3, title: '3'},
+{from: 3, to: 116, value: 3, title: '3'},
+{from: 3, to: 810, value: 3, title: '3'},
+];
+
+        var container = document.getElementById("mynetwork");
+        var data = {nodes: nodes, edges: edges};
+        var options = { nodes: {shape: 'dot'}};
+        network = new vis.Network(container, data, options);
+} </script>
+ </head>
+<body onload="draw()">
+<h1> GKG Persons Graph (Top 19 Entities)</h1>
+<h2> 1-FEB-2020 through 16-FEB-2020</h2>
+<h2> Filtered on: Organization = US Army  (5464 entries)</h2>
+<div id="mynetwork"></div>
+ </body>
+</html>
